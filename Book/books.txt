@@ -1,0 +1,11 @@
+Book|James|55abc555|3|35.37|8
+Nauja|Kelias|222|1|10.0
+Nauja|Knyga|11111|1|10.0
+James|My version|bbbbb|1|100.0
+Nauja|Knyga|abcd|1|10.0
+Nauja|Knyga|qwerty|1|10.0
+Mano|Knyga|99999|1|100.0
+Mano|Knyga|0000|1|100.0
+Rowling|Harry Potter|ssss|1|100.0
+Rowling|Harry Potter|g|1|100.0
+J.K. Rowling|Harry Potter|d|1|100.0|1800
