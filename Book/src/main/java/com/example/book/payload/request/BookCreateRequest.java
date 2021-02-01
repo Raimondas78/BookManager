@@ -6,13 +6,24 @@ import com.example.book.entity.ScienceJournal;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class BookCreateRequest {
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
+public class BookCreateRequest {
+    @NotBlank(message = "Book name should not be blank")
     private final String name;
+    @NotBlank(message = "Book author should not be blank")
     private final String author;
+    @NotNull(message = "Barcode should not be null")
     private final String barcode;
+    @Min(0)
     private final int quantity;
+    @Min(0)
     private final double price;
+    @Min(1)
+    @Max(1900)
     private final int lastMember;
 
     @JsonCreator
@@ -22,6 +33,11 @@ public class BookCreateRequest {
                              @JsonProperty("quantity") int quantity,
                              @JsonProperty("price") double price,
                              @JsonProperty("lastMember") int lastMember) {
+        if(barcode.isBlank()){
+            throw new IllegalArgumentException("barcode can't be null");
+        }
+
+
         this.name = name;
         this.author = author;
         this.barcode = barcode;

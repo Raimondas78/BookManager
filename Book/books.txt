@@ -9,3 +9,7 @@ Mano|Knyga|0000|1|100.0
 Rowling|Harry Potter|ssss|1|100.0
 Rowling|Harry Potter|g|1|100.0
 J.K. Rowling|Harry Potter|d|1|100.0|1800
+New|Book|qwert|2|10.0|1899
+New|Book|q|1|10.0|1899
+New|Book|nnn|1|15.0|1898
+Neu|Bok|r|1|12.0|1808

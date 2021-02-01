@@ -94,10 +94,10 @@ public class BookRepository{
         if (bookUpdateRequest.getAuthor() != null) {
             author = bookUpdateRequest.getAuthor();
         }
-        if (bookUpdateRequest.getPrice() != 0) {
+        if (bookUpdateRequest.getPrice() != 0 && bookUpdateRequest.getPrice() >0) {
             price = bookUpdateRequest.getPrice();
         }
-        if (bookUpdateRequest.getQuantity() != 0) {
+        if (bookUpdateRequest.getQuantity() != 0 && bookUpdateRequest.getQuantity()>=0) {
             quantity = bookUpdateRequest.getQuantity();
         }
         int lastMember;
@@ -107,7 +107,7 @@ public class BookRepository{
                 newBook = new Book(name,author, barcode, quantity, price);
                 break;
             case 6:
-                if (bookUpdateRequest.getLastMember() != 0) {
+                if (bookUpdateRequest.getLastMember() != 0 && bookUpdateRequest.getLastMember()>0) {
                     lastMember = bookUpdateRequest.getLastMember();
                     if (lastMember > 10 && lastMember < 1900) {
                         newBook = new AntiqueBook(name, author, barcode, quantity, price, lastMember);

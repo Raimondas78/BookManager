@@ -1,6 +1,8 @@
 package com.example.book.payload.request;
 
 
+import javax.validation.constraints.NotNull;
+
 public class BookUpdateRequest {
 
     private String name;

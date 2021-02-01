@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.NoSuchElementException;
 import java.util.Optional;
 
@@ -32,7 +33,6 @@ public class BookController {
         Book newBook = book.get();
 
         return newBook.getTotalPrice();
-                //AllBookResponse.fromBook(newBook).getTotalPrice(newBook);
     }
 
 
@@ -47,7 +47,7 @@ public class BookController {
     }
 
     @PostMapping("books")
-    public void addBook(@RequestBody BookCreateRequest bookCreateRequest) {
+    public void addBook(@RequestBody @Valid BookCreateRequest bookCreateRequest) {
         Book book = bookCreateRequest.asBook(bookCreateRequest);
         bookRepository.saveBook(book);
     }
