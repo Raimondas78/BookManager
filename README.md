@@ -13,6 +13,7 @@ Program can be tested using i.e. Postman, as front end part isn't built yet.
 API end points description:
 
 root "/api"
+
 @GetMapping("books/price/{barcode}") - to get a book price by barcode that corresponds to a unique identifier.
 
 @GetMapping("books/{barcode}") - to get a book by barcode.
