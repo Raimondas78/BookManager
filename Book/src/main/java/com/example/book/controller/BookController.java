@@ -31,7 +31,8 @@ public class BookController {
         }
         Book newBook = book.get();
 
-        return AllBookResponse.fromBook(newBook).getTotalPrice(newBook);
+        return newBook.getTotalPrice();
+                //AllBookResponse.fromBook(newBook).getTotalPrice(newBook);
     }
 
 

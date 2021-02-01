@@ -3,7 +3,6 @@ package com.example.book.entity;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.text.DecimalFormat;
 import java.util.Objects;
 
 public class Book implements Serializable {
@@ -68,12 +67,12 @@ public class Book implements Serializable {
         this.price = price;
     }
 
-//    public double getTotalPrice(){
-//        double totalPrice = getQuantity()*getPrice();
-//        BigDecimal bd = BigDecimal.valueOf(totalPrice);
-//        bd = bd.setScale(2, RoundingMode.HALF_UP);
-//        return bd.doubleValue();
-//    }
+    public double getTotalPrice(){
+        double totalPrice = getQuantity()*getPrice();
+        BigDecimal bd = BigDecimal.valueOf(totalPrice);
+        bd = bd.setScale(2, RoundingMode.HALF_UP);
+        return bd.doubleValue();
+    }
 
     @Override
     public String toString() {

@@ -18,7 +18,7 @@ public class AntiqueBook extends Book {
         }
     }
 
-    public int tReleaseYear() {
+    public int getReleaseYear() {
         return releaseYear;
     }
 
@@ -26,12 +26,12 @@ public class AntiqueBook extends Book {
         this.releaseYear = releaseYear;
     }
 
-//    public double getTotalPrice(){
-//        double totalPrice = getQuantity()*getPrice()*(LocalDate.now().getYear()-this.releaseYear)/10;
-//        BigDecimal bd = BigDecimal.valueOf(totalPrice);
-//        bd = bd.setScale(2, RoundingMode.HALF_UP);
-//        return bd.doubleValue();
-//    }
+    public double getTotalPrice(){
+        double totalPrice = getQuantity()*getPrice()*(LocalDate.now().getYear()-this.releaseYear)/10;
+        BigDecimal bd = BigDecimal.valueOf(totalPrice);
+        bd = bd.setScale(2, RoundingMode.HALF_UP);
+        return bd.doubleValue();
+    }
 
     @Override
     public String toString() {

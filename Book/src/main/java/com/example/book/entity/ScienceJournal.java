@@ -27,12 +27,12 @@ public class ScienceJournal extends Book {
         this.scienceIndex = scienceIndex;
     }
 
-//    public double getTotalPrice(){
-//        double totalPrice = getQuantity()*getPrice()*this.scienceIndex;
-//        BigDecimal bd = BigDecimal.valueOf(totalPrice);
-//        bd = bd.setScale(2, RoundingMode.HALF_UP);
-//        return bd.doubleValue();
-//    }
+    public double getTotalPrice(){
+        double totalPrice = getQuantity()*getPrice()*this.scienceIndex;
+        BigDecimal bd = BigDecimal.valueOf(totalPrice);
+        bd = bd.setScale(2, RoundingMode.HALF_UP);
+        return bd.doubleValue();
+    }
 
     @Override
     public String toString() {
