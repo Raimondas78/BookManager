@@ -18,7 +18,7 @@ root "/api"
 
 @GetMapping("books/{barcode}") - to get a book by barcode.
 
-@PostMapping("books") - to add a book. In case of testing with Postman, need to provide JSON with 5 or 6 fields.
+@PostMapping("books") - to add a book. In case of testing with Postman, need to provide JSON with 5 or 6 fields under tab Body.
 
 example:
 1)
